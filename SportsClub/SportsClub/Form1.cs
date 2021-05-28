@@ -15,6 +15,8 @@ namespace SportsClub
 {
     public partial class MembersForm : Form
     {
+        
+
         string ordb = "data source=orcl; user id=hr; password=hr;";
         OracleConnection conn;
         string eventType;
@@ -87,6 +89,56 @@ namespace SportsClub
                 cmb_events.Items.Add(dr[0]);
             }
             dr.Close();
+        }
+
+        private void cmb_events_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OracleCommand selecEventData = new OracleCommand();
+            selecEventData.Connection = conn;
+            selecEventData.CommandText = "getEventData";
+            selecEventData.CommandType = CommandType.StoredProcedure;
+
+            selecEventData.Parameters.Add("evname", cmb_events.Text);
+            selecEventData.Parameters.Add("sd", OracleDbType.Date, ParameterDirection.Output);
+            selecEventData.Parameters.Add("ed", OracleDbType.Date, ParameterDirection.Output);
+            selecEventData.Parameters.Add("evcost", OracleDbType.Int32, ParameterDirection.Output);
+
+            selecEventData.ExecuteNonQuery();
+            try
+            {
+                lbl_sd.Text = Convert.ToDateTime(selecEventData.Parameters["sd"].Value.ToString()).ToString();
+                lbl_ed.Text = Convert.ToDateTime(selecEventData.Parameters["ed"].Value.ToString()).ToString();
+                lbl_cost.Text = selecEventData.Parameters["evcost"].Value.ToString();
+                
+            }
+            catch 
+            {
+                MessageBox.Show("Error");
+
+            }
+                
+            
+
+
+
+        }
+
+        private void lbl_ed_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_book_Click(object sender, EventArgs e)
+        {
+            int totalCost;
+            totalCost = Convert.ToInt32(txt_notick.Text) * Convert.ToInt32(lbl_cost.Text);
+            lbl_totalcost.Text = totalCost.ToString();
+
+            OracleCommand insertBookingData = new OracleCommand();
+            insertBookingData.Connection = conn;
+
+
+            MessageBox.Show("Has Been Booked Successfully \nThe total Cost: " + totalCost);
         }
     }
 }

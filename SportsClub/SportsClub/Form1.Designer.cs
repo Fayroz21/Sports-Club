@@ -54,6 +54,7 @@ namespace SportsClub
             this.lbl_bookid = new System.Windows.Forms.Label();
             this.btn_book = new System.Windows.Forms.Button();
             this.btn_load = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tab_book.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +71,7 @@ namespace SportsClub
             // 
             // tab_book
             // 
+            this.tab_book.Controls.Add(this.label8);
             this.tab_book.Controls.Add(this.btn_load);
             this.tab_book.Controls.Add(this.btn_book);
             this.tab_book.Controls.Add(this.lbl_bookid);
@@ -158,6 +160,7 @@ namespace SportsClub
             this.cmb_events.Name = "cmb_events";
             this.cmb_events.Size = new System.Drawing.Size(173, 24);
             this.cmb_events.TabIndex = 4;
+            this.cmb_events.SelectedIndexChanged += new System.EventHandler(this.cmb_events_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -192,9 +195,9 @@ namespace SportsClub
             this.lbl_cost.AutoSize = true;
             this.lbl_cost.Location = new System.Drawing.Point(698, 340);
             this.lbl_cost.Name = "lbl_cost";
-            this.lbl_cost.Size = new System.Drawing.Size(45, 17);
+            this.lbl_cost.Size = new System.Drawing.Size(28, 17);
             this.lbl_cost.TabIndex = 8;
-            this.lbl_cost.Text = "0.0LE";
+            this.lbl_cost.Text = "0.0";
             this.lbl_cost.Click += new System.EventHandler(this.lbl_cost_Click);
             // 
             // label5
@@ -248,6 +251,7 @@ namespace SportsClub
             this.lbl_ed.Size = new System.Drawing.Size(79, 17);
             this.lbl_ed.TabIndex = 16;
             this.lbl_ed.Text = "End Date...";
+            this.lbl_ed.Click += new System.EventHandler(this.lbl_ed_Click);
             // 
             // label10
             // 
@@ -302,6 +306,7 @@ namespace SportsClub
             this.btn_book.TabIndex = 22;
             this.btn_book.Text = "Book";
             this.btn_book.UseVisualStyleBackColor = true;
+            this.btn_book.Click += new System.EventHandler(this.btn_book_Click);
             // 
             // btn_load
             // 
@@ -312,6 +317,15 @@ namespace SportsClub
             this.btn_load.Text = "Load Events";
             this.btn_load.UseVisualStyleBackColor = true;
             this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(732, 340);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(25, 17);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "LE";
             // 
             // MembersForm
             // 
@@ -357,6 +371,7 @@ namespace SportsClub
         private System.Windows.Forms.Label lbl_ed;
         private System.Windows.Forms.Label lbl_sd;
         private System.Windows.Forms.Button btn_load;
+        private System.Windows.Forms.Label label8;
     }
 }
 
