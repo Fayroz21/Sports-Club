@@ -130,13 +130,31 @@ namespace SportsClub
 
         private void btn_book_Click(object sender, EventArgs e)
         {
+            //Calculate total Cost
             int totalCost;
             totalCost = Convert.ToInt32(txt_notick.Text) * Convert.ToInt32(lbl_cost.Text);
             lbl_totalcost.Text = totalCost.ToString();
 
-            OracleCommand insertBookingData = new OracleCommand();
-            insertBookingData.Connection = conn;
-
+            //Get book id
+            int newID;
+            OracleCommand getBookId = new OracleCommand();
+            getBookId.Connection = conn;
+            getBookId.CommandText = "getbookid";
+            getBookId.CommandType = CommandType.StoredProcedure;
+            getBookId.Parameters.Add("bid", OracleDbType.Int32, ParameterDirection.Output);
+            getBookId.ExecuteNonQuery();
+            try
+            {
+                newID = Convert.ToInt32(getBookId.Parameters["bid"].Value.ToString()) + 1;
+            }
+            catch
+            {
+                newID = 1;
+            }
+            
+            //Insert
+            
+            
 
             MessageBox.Show("Has Been Booked Successfully \nThe total Cost: " + totalCost);
         }
