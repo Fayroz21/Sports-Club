@@ -48,7 +48,7 @@ namespace SportsClub
 
         private void lbl_cost_Click(object sender, EventArgs e)
         {
-
+            //fvmcfjnf
         }
 
         private void MembersForm_Load(object sender, EventArgs e)
@@ -146,12 +146,14 @@ namespace SportsClub
             try
             {
                 newID = Convert.ToInt32(getBookId.Parameters["bid"].Value.ToString()) + 1;
+
             }
             catch
             {
                 newID = 1;
+
             }
-            
+                lbl_bookid.Text = newID.ToString();
             //Insert
             
             

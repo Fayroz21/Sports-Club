@@ -10,3 +10,14 @@ D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\obj\Debug\SportsClu
 D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\obj\Debug\SportsClub.csproj.CopyComplete
 D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\obj\Debug\SportsClub.exe
 D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\obj\Debug\SportsClub.pdb
+C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\bin\Debug\SportsClub.exe.config
+C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\bin\Debug\SportsClub.exe
+C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\bin\Debug\SportsClub.pdb
+C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.csprojAssemblyReference.cache
+C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.MembersForm.resources
+C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.Properties.Resources.resources
+C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.csproj.GenerateResource.cache
+C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.csproj.CoreCompileInputs.cache
+C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.csproj.CopyComplete
+C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.exe
+C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.pdb
