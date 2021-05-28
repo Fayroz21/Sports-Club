@@ -1,0 +1,12 @@
+D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\bin\Debug\SportsClub.exe.config
+D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\bin\Debug\SportsClub.exe
+D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\bin\Debug\SportsClub.pdb
+D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\bin\Debug\Oracle.DataAccess.dll
+D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\obj\Debug\SportsClub.csprojAssemblyReference.cache
+D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\obj\Debug\SportsClub.MembersForm.resources
+D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\obj\Debug\SportsClub.Properties.Resources.resources
+D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\obj\Debug\SportsClub.csproj.GenerateResource.cache
+D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\obj\Debug\SportsClub.csproj.CoreCompileInputs.cache
+D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\obj\Debug\SportsClub.csproj.CopyComplete
+D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\obj\Debug\SportsClub.exe
+D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\obj\Debug\SportsClub.pdb
