@@ -20,7 +20,7 @@ namespace SportsClub
         string ordb = "data source=orcl; user id=hr; password=hr;";
         OracleConnection conn;
         string eventType;
-
+        int eventID;
         public MembersForm()
         {
             InitializeComponent();
@@ -57,7 +57,7 @@ namespace SportsClub
             conn.Open();
            
         }
-
+        
         private void MembersForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             conn.Dispose();
@@ -102,6 +102,7 @@ namespace SportsClub
             selecEventData.Parameters.Add("sd", OracleDbType.Date, ParameterDirection.Output);
             selecEventData.Parameters.Add("ed", OracleDbType.Date, ParameterDirection.Output);
             selecEventData.Parameters.Add("evcost", OracleDbType.Int32, ParameterDirection.Output);
+            selecEventData.Parameters.Add("eventID", OracleDbType.Int32, ParameterDirection.Output);
 
             selecEventData.ExecuteNonQuery();
             try
@@ -109,6 +110,7 @@ namespace SportsClub
                 lbl_sd.Text = Convert.ToDateTime(selecEventData.Parameters["sd"].Value.ToString()).ToString();
                 lbl_ed.Text = Convert.ToDateTime(selecEventData.Parameters["ed"].Value.ToString()).ToString();
                 lbl_cost.Text = selecEventData.Parameters["evcost"].Value.ToString();
+                eventID = Convert.ToInt32(selecEventData.Parameters["eventID"].Value.ToString());
                 
             }
             catch 
@@ -153,12 +155,46 @@ namespace SportsClub
                 newID = 1;
 
             }
-                lbl_bookid.Text = newID.ToString();
-            //Insert
-            
-            
+               lbl_bookid.Text = newID.ToString();
 
-            MessageBox.Show("Has Been Booked Successfully \nThe total Cost: " + totalCost);
+            //get Event ID
+            //int eventID;
+            //OracleCommand getEventId = new OracleCommand();
+            //getEventId.Connection = conn;
+            //getEventId.CommandText = "select eventid from events where eventname =: name";
+            //getEventId.CommandType = CommandType.Text;
+            //getEventId.Parameters.Add("name", cmb_events.Text);
+            //OracleDataReader dr = getEventId.ExecuteReader();
+            //if(dr.Read())
+            //{
+            //    eventID = Convert.ToInt32(dr[0].ToString());
+            //}
+            //else
+            //{
+            //    eventID = 0;
+            //}
+            //Insert
+            OracleCommand insertBooking = new OracleCommand();
+            insertBooking.Connection = conn;
+            insertBooking.CommandText = "insert into bookings values(:bookID,:eventID,:memberID,:noOfPersons,:totalCost)";
+            insertBooking.CommandType = CommandType.Text;
+            insertBooking.Parameters.Add("bookID", newID);
+            insertBooking.Parameters.Add("EventID", eventID);
+            insertBooking.Parameters.Add("memberID", txt_memid.Text);
+            insertBooking.Parameters.Add("noOfPersons", txt_notick.Text);
+            insertBooking.Parameters.Add("totalCost", lbl_totalcost.Text);
+            int r = insertBooking.ExecuteNonQuery();
+            if(r != -1)
+            {
+                MessageBox.Show("Has Been Booked Successfully \nThe total Cost: " + totalCost);
+            }
+
+            else
+            {
+                MessageBox.Show("Error");
+            }
+
+           
         }
     }
 }
