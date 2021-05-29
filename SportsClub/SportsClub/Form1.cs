@@ -181,5 +181,20 @@ namespace SportsClub
 
            
         }
+
+        private void Sport_cmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "Select SportName from Sports ";
+            cmd.CommandType = CommandType.Text;
+
+            OracleDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                Sport_cmb.Items.Add(dr[0]);
+            }
+            dr.Close();
+        }
     }
 }
