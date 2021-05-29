@@ -61,7 +61,7 @@ namespace SportsClub
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.MemberID_txt = new System.Windows.Forms.TextBox();
             this.Female_rb = new System.Windows.Forms.RadioButton();
             this.Kid_rb = new System.Windows.Forms.RadioButton();
             this.Adult_rb = new System.Windows.Forms.RadioButton();
@@ -342,7 +342,7 @@ namespace SportsClub
             this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.label16);
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.MemberID_txt);
             this.tabPage2.Controls.Add(this.Female_rb);
             this.tabPage2.Controls.Add(this.Kid_rb);
             this.tabPage2.Controls.Add(this.Adult_rb);
@@ -414,12 +414,13 @@ namespace SportsClub
             this.label16.TabIndex = 11;
             this.label16.Text = "Cost";
             // 
-            // textBox1
+            // MemberID_txt
             // 
-            this.textBox1.Location = new System.Drawing.Point(424, 148);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 22);
-            this.textBox1.TabIndex = 10;
+            this.MemberID_txt.Location = new System.Drawing.Point(424, 148);
+            this.MemberID_txt.Name = "MemberID_txt";
+            this.MemberID_txt.Size = new System.Drawing.Size(121, 22);
+            this.MemberID_txt.TabIndex = 10;
+            this.MemberID_txt.TextChanged += new System.EventHandler(this.MemberID_txt_TextChanged_1);
             // 
             // Female_rb
             // 
@@ -563,7 +564,7 @@ namespace SportsClub
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox MemberID_txt;
         private System.Windows.Forms.RadioButton Female_rb;
         private System.Windows.Forms.RadioButton Kid_rb;
         private System.Windows.Forms.RadioButton Adult_rb;

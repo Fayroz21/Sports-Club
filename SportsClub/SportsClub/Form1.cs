@@ -55,7 +55,18 @@ namespace SportsClub
         {
             conn = new OracleConnection(ordb);
             conn.Open();
-           
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "Select SportName from Sports ";
+            cmd.CommandType = CommandType.Text;
+
+            OracleDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
+            {
+                Sport_cmb.Items.Add(dr[0]);
+            }
+            dr.Close();
+
         }
         
         private void MembersForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -184,17 +195,12 @@ namespace SportsClub
 
         private void Sport_cmb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            OracleCommand cmd = new OracleCommand();
-            cmd.Connection = conn;
-            cmd.CommandText = "Select SportName from Sports ";
-            cmd.CommandType = CommandType.Text;
+           
+        }
 
-            OracleDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                Sport_cmb.Items.Add(dr[0]);
-            }
-            dr.Close();
+        private void MemberID_txt_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
