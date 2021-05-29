@@ -157,22 +157,7 @@ namespace SportsClub
             }
                lbl_bookid.Text = newID.ToString();
 
-            //get Event ID
-            //int eventID;
-            //OracleCommand getEventId = new OracleCommand();
-            //getEventId.Connection = conn;
-            //getEventId.CommandText = "select eventid from events where eventname =: name";
-            //getEventId.CommandType = CommandType.Text;
-            //getEventId.Parameters.Add("name", cmb_events.Text);
-            //OracleDataReader dr = getEventId.ExecuteReader();
-            //if(dr.Read())
-            //{
-            //    eventID = Convert.ToInt32(dr[0].ToString());
-            //}
-            //else
-            //{
-            //    eventID = 0;
-            //}
+         
             //Insert
             OracleCommand insertBooking = new OracleCommand();
             insertBooking.Connection = conn;

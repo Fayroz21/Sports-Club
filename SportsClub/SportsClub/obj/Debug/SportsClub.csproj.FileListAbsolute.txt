@@ -21,3 +21,4 @@ C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.cs
 C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.csproj.CopyComplete
 C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.exe
 C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.pdb
+C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.Form2.resources
