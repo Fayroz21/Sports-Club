@@ -55,8 +55,25 @@ namespace SportsClub
             this.radioButton_trips = new System.Windows.Forms.RadioButton();
             this.radioButton_sport = new System.Windows.Forms.RadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label20 = new System.Windows.Forms.Label();
+            this.TeamID_lbl = new System.Windows.Forms.Label();
+            this.Sport_cmb = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.MemberID_txt = new System.Windows.Forms.TextBox();
+            this.Female_rb = new System.Windows.Forms.RadioButton();
+            this.Kid_rb = new System.Windows.Forms.RadioButton();
+            this.Adult_rb = new System.Windows.Forms.RadioButton();
+            this.Male_rb = new System.Windows.Forms.RadioButton();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.Cost_lbl = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Join_btn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tab_book.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -319,6 +336,22 @@ namespace SportsClub
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label20);
+            this.tabPage2.Controls.Add(this.TeamID_lbl);
+            this.tabPage2.Controls.Add(this.Sport_cmb);
+            this.tabPage2.Controls.Add(this.label18);
+            this.tabPage2.Controls.Add(this.label17);
+            this.tabPage2.Controls.Add(this.label16);
+            this.tabPage2.Controls.Add(this.MemberID_txt);
+            this.tabPage2.Controls.Add(this.Female_rb);
+            this.tabPage2.Controls.Add(this.Kid_rb);
+            this.tabPage2.Controls.Add(this.Adult_rb);
+            this.tabPage2.Controls.Add(this.Male_rb);
+            this.tabPage2.Controls.Add(this.label15);
+            this.tabPage2.Controls.Add(this.label14);
+            this.tabPage2.Controls.Add(this.Cost_lbl);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.Join_btn);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -326,6 +359,157 @@ namespace SportsClub
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(572, 391);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(29, 17);
+            this.label20.TabIndex = 17;
+            this.label20.Text = "L.E";
+            // 
+            // TeamID_lbl
+            // 
+            this.TeamID_lbl.AutoSize = true;
+            this.TeamID_lbl.Location = new System.Drawing.Point(421, 391);
+            this.TeamID_lbl.Name = "TeamID_lbl";
+            this.TeamID_lbl.Size = new System.Drawing.Size(40, 17);
+            this.TeamID_lbl.TabIndex = 16;
+            this.TeamID_lbl.Text = "        ";
+            // 
+            // Sport_cmb
+            // 
+            this.Sport_cmb.FormattingEnabled = true;
+            this.Sport_cmb.Location = new System.Drawing.Point(424, 69);
+            this.Sport_cmb.Name = "Sport_cmb";
+            this.Sport_cmb.Size = new System.Drawing.Size(121, 24);
+            this.Sport_cmb.TabIndex = 15;
+            this.Sport_cmb.SelectedIndexChanged += new System.EventHandler(this.Sport_cmb_SelectedIndexChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(277, 307);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(33, 17);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "Age";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(277, 151);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(76, 17);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "Member ID";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(277, 469);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(36, 17);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "Cost";
+            // 
+            // MemberID_txt
+            // 
+            this.MemberID_txt.Location = new System.Drawing.Point(424, 148);
+            this.MemberID_txt.Name = "MemberID_txt";
+            this.MemberID_txt.Size = new System.Drawing.Size(121, 22);
+            this.MemberID_txt.TabIndex = 10;
+            this.MemberID_txt.TextChanged += new System.EventHandler(this.MemberID_txt_TextChanged_1);
+            // 
+            // Female_rb
+            // 
+            this.Female_rb.AutoSize = true;
+            this.Female_rb.Location = new System.Drawing.Point(647, 228);
+            this.Female_rb.Name = "Female_rb";
+            this.Female_rb.Size = new System.Drawing.Size(75, 21);
+            this.Female_rb.TabIndex = 9;
+            this.Female_rb.TabStop = true;
+            this.Female_rb.Text = "Female";
+            this.Female_rb.UseVisualStyleBackColor = true;
+            // 
+            // Kid_rb
+            // 
+            this.Kid_rb.AutoSize = true;
+            this.Kid_rb.Location = new System.Drawing.Point(413, 303);
+            this.Kid_rb.Name = "Kid_rb";
+            this.Kid_rb.Size = new System.Drawing.Size(49, 21);
+            this.Kid_rb.TabIndex = 8;
+            this.Kid_rb.TabStop = true;
+            this.Kid_rb.Text = "Kid";
+            this.Kid_rb.UseVisualStyleBackColor = true;
+            // 
+            // Adult_rb
+            // 
+            this.Adult_rb.AutoSize = true;
+            this.Adult_rb.Location = new System.Drawing.Point(638, 303);
+            this.Adult_rb.Name = "Adult_rb";
+            this.Adult_rb.Size = new System.Drawing.Size(106, 21);
+            this.Adult_rb.TabIndex = 7;
+            this.Adult_rb.TabStop = true;
+            this.Adult_rb.Text = "Young Adult";
+            this.Adult_rb.UseVisualStyleBackColor = true;
+            // 
+            // Male_rb
+            // 
+            this.Male_rb.AutoSize = true;
+            this.Male_rb.Location = new System.Drawing.Point(413, 226);
+            this.Male_rb.Name = "Male_rb";
+            this.Male_rb.Size = new System.Drawing.Size(59, 21);
+            this.Male_rb.TabIndex = 6;
+            this.Male_rb.TabStop = true;
+            this.Male_rb.Text = "Male";
+            this.Male_rb.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(277, 228);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(56, 17);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Gender";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(277, 69);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(108, 17);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Sport You Want";
+            // 
+            // Cost_lbl
+            // 
+            this.Cost_lbl.AutoSize = true;
+            this.Cost_lbl.Location = new System.Drawing.Point(421, 469);
+            this.Cost_lbl.Name = "Cost_lbl";
+            this.Cost_lbl.Size = new System.Drawing.Size(28, 17);
+            this.Cost_lbl.TabIndex = 3;
+            this.Cost_lbl.Text = "0.0";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(277, 391);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 17);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Team ID";
+            // 
+            // Join_btn
+            // 
+            this.Join_btn.Location = new System.Drawing.Point(682, 496);
+            this.Join_btn.Name = "Join_btn";
+            this.Join_btn.Size = new System.Drawing.Size(75, 23);
+            this.Join_btn.TabIndex = 1;
+            this.Join_btn.Text = "Join";
+            this.Join_btn.UseVisualStyleBackColor = true;
             // 
             // MembersForm
             // 
@@ -340,6 +524,8 @@ namespace SportsClub
             this.tabControl1.ResumeLayout(false);
             this.tab_book.ResumeLayout(false);
             this.tab_book.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -372,6 +558,22 @@ namespace SportsClub
         private System.Windows.Forms.Label lbl_sd;
         private System.Windows.Forms.Button btn_load;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label TeamID_lbl;
+        private System.Windows.Forms.ComboBox Sport_cmb;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox MemberID_txt;
+        private System.Windows.Forms.RadioButton Female_rb;
+        private System.Windows.Forms.RadioButton Kid_rb;
+        private System.Windows.Forms.RadioButton Adult_rb;
+        private System.Windows.Forms.RadioButton Male_rb;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label Cost_lbl;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button Join_btn;
     }
 }
 

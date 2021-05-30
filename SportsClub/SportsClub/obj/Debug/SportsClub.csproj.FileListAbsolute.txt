@@ -22,3 +22,14 @@ C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.cs
 C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.exe
 C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.pdb
 C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.Form2.resources
+E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\bin\Debug\SportsClub.exe.config
+E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\bin\Debug\SportsClub.exe
+E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\bin\Debug\SportsClub.pdb
+E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.csproj.AssemblyReference.cache
+E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.MembersForm.resources
+E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.Form2.resources
+E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.Properties.Resources.resources
+E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.csproj.GenerateResource.cache
+E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.csproj.CoreCompileInputs.cache
+E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.exe
+E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.pdb
