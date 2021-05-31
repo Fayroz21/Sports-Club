@@ -56,6 +56,7 @@ namespace SportsClub
             this.radioButton_trips = new System.Windows.Forms.RadioButton();
             this.radioButton_sport = new System.Windows.Forms.RadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Save_btn = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.CapName_lbl = new System.Windows.Forms.Label();
             this.Sport_cmb = new System.Windows.Forms.ComboBox();
@@ -65,14 +66,13 @@ namespace SportsClub
             this.MemberID_txt = new System.Windows.Forms.TextBox();
             this.Female_rb = new System.Windows.Forms.RadioButton();
             this.Kid_rb = new System.Windows.Forms.RadioButton();
-            this.Adult_rb = new System.Windows.Forms.RadioButton();
+            this.Teenager_rb = new System.Windows.Forms.RadioButton();
             this.Male_rb = new System.Windows.Forms.RadioButton();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.Cost_lbl = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Join_btn = new System.Windows.Forms.Button();
-            this.Save_btn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tab_book.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -363,7 +363,7 @@ namespace SportsClub
             this.tabPage2.Controls.Add(this.MemberID_txt);
             this.tabPage2.Controls.Add(this.Female_rb);
             this.tabPage2.Controls.Add(this.Kid_rb);
-            this.tabPage2.Controls.Add(this.Adult_rb);
+            this.tabPage2.Controls.Add(this.Teenager_rb);
             this.tabPage2.Controls.Add(this.Male_rb);
             this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.label14);
@@ -377,6 +377,17 @@ namespace SportsClub
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // Save_btn
+            // 
+            this.Save_btn.Location = new System.Drawing.Point(669, 391);
+            this.Save_btn.Name = "Save_btn";
+            this.Save_btn.Size = new System.Drawing.Size(75, 23);
+            this.Save_btn.TabIndex = 18;
+            this.Save_btn.Text = "Save";
+            this.Save_btn.UseVisualStyleBackColor = true;
+            this.Save_btn.Click += new System.EventHandler(this.Save_btn_Click);
             // 
             // label20
             // 
@@ -462,16 +473,16 @@ namespace SportsClub
             this.Kid_rb.Text = "Kid";
             this.Kid_rb.UseVisualStyleBackColor = true;
             // 
-            // Adult_rb
+            // Teenager_rb
             // 
-            this.Adult_rb.AutoSize = true;
-            this.Adult_rb.Location = new System.Drawing.Point(638, 303);
-            this.Adult_rb.Name = "Adult_rb";
-            this.Adult_rb.Size = new System.Drawing.Size(106, 21);
-            this.Adult_rb.TabIndex = 7;
-            this.Adult_rb.TabStop = true;
-            this.Adult_rb.Text = "Young Adult";
-            this.Adult_rb.UseVisualStyleBackColor = true;
+            this.Teenager_rb.AutoSize = true;
+            this.Teenager_rb.Location = new System.Drawing.Point(638, 303);
+            this.Teenager_rb.Name = "Teenager_rb";
+            this.Teenager_rb.Size = new System.Drawing.Size(91, 21);
+            this.Teenager_rb.TabIndex = 7;
+            this.Teenager_rb.TabStop = true;
+            this.Teenager_rb.Text = "Teenager";
+            this.Teenager_rb.UseVisualStyleBackColor = true;
             // 
             // Male_rb
             // 
@@ -529,16 +540,6 @@ namespace SportsClub
             this.Join_btn.Text = "Join";
             this.Join_btn.UseVisualStyleBackColor = true;
             // 
-            // Save_btn
-            // 
-            this.Save_btn.Location = new System.Drawing.Point(669, 391);
-            this.Save_btn.Name = "Save_btn";
-            this.Save_btn.Size = new System.Drawing.Size(75, 23);
-            this.Save_btn.TabIndex = 18;
-            this.Save_btn.Text = "Save";
-            this.Save_btn.UseVisualStyleBackColor = true;
-            this.Save_btn.Click += new System.EventHandler(this.Save_btn_Click);
-            // 
             // MembersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -595,7 +596,7 @@ namespace SportsClub
         private System.Windows.Forms.TextBox MemberID_txt;
         private System.Windows.Forms.RadioButton Female_rb;
         private System.Windows.Forms.RadioButton Kid_rb;
-        private System.Windows.Forms.RadioButton Adult_rb;
+        private System.Windows.Forms.RadioButton Teenager_rb;
         private System.Windows.Forms.RadioButton Male_rb;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
