@@ -23,12 +23,11 @@ namespace SportsClub
         //Saved For efficiency
         string eventType;
         int eventID;
-<<<<<<< HEAD
+
         int totalCost;
         int newID;
 
-=======
->>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
+
         public MembersForm()
         {
             InitializeComponent();
@@ -63,7 +62,7 @@ namespace SportsClub
         {
             conn = new OracleConnection(ordb);
             conn.Open();
-<<<<<<< HEAD
+
 
 
             OracleCommand cmd = new OracleCommand();
@@ -80,7 +79,7 @@ namespace SportsClub
             dr.Close();
 
 
-=======
+
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
             cmd.CommandText = "Select SportName from Sports ";
@@ -93,7 +92,7 @@ namespace SportsClub
             }
             dr.Close();
 
->>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
+
         }
         
         private void MembersForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -239,12 +238,12 @@ namespace SportsClub
                 newID = 1;
 
             }
-<<<<<<< HEAD
+
 
             lbl_bookid.Text = newID.ToString();
 
             btn_book.Visible = true;
-=======
+
                lbl_bookid.Text = newID.ToString();
 
          
@@ -280,7 +279,17 @@ namespace SportsClub
         private void MemberID_txt_TextChanged_1(object sender, EventArgs e)
         {
 
->>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
+
+        }
+
+        private void Save_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_bookid_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

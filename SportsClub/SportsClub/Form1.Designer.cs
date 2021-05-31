@@ -31,6 +31,7 @@ namespace SportsClub
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab_book = new System.Windows.Forms.TabPage();
+            this.btn_save = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.btn_load = new System.Windows.Forms.Button();
             this.btn_book = new System.Windows.Forms.Button();
@@ -56,7 +57,7 @@ namespace SportsClub
             this.radioButton_sport = new System.Windows.Forms.RadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label20 = new System.Windows.Forms.Label();
-            this.TeamID_lbl = new System.Windows.Forms.Label();
+            this.CapName_lbl = new System.Windows.Forms.Label();
             this.Sport_cmb = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -71,10 +72,7 @@ namespace SportsClub
             this.Cost_lbl = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Join_btn = new System.Windows.Forms.Button();
-<<<<<<< HEAD
-            this.btn_save = new System.Windows.Forms.Button();
-=======
->>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
+            this.Save_btn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tab_book.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -124,6 +122,16 @@ namespace SportsClub
             this.tab_book.Text = "Booking";
             this.tab_book.UseVisualStyleBackColor = true;
             // 
+            // btn_save
+            // 
+            this.btn_save.Location = new System.Drawing.Point(571, 390);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(75, 35);
+            this.btn_save.TabIndex = 25;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.button1_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -135,15 +143,9 @@ namespace SportsClub
             // 
             // btn_load
             // 
-<<<<<<< HEAD
             this.btn_load.Location = new System.Drawing.Point(590, 79);
             this.btn_load.Name = "btn_load";
             this.btn_load.Size = new System.Drawing.Size(205, 37);
-=======
-            this.btn_load.Location = new System.Drawing.Point(592, 89);
-            this.btn_load.Name = "btn_load";
-            this.btn_load.Size = new System.Drawing.Size(205, 24);
->>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
             this.btn_load.TabIndex = 23;
             this.btn_load.Text = "Load Events";
             this.btn_load.UseVisualStyleBackColor = true;
@@ -151,20 +153,13 @@ namespace SportsClub
             // 
             // btn_book
             // 
-<<<<<<< HEAD
             this.btn_book.Location = new System.Drawing.Point(799, 538);
-=======
-            this.btn_book.Location = new System.Drawing.Point(802, 451);
->>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
             this.btn_book.Name = "btn_book";
             this.btn_book.Size = new System.Drawing.Size(131, 42);
             this.btn_book.TabIndex = 22;
             this.btn_book.Text = "Book";
             this.btn_book.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
             this.btn_book.Visible = false;
-=======
->>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
             this.btn_book.Click += new System.EventHandler(this.btn_book_Click);
             // 
             // lbl_bookid
@@ -175,6 +170,7 @@ namespace SportsClub
             this.lbl_bookid.Size = new System.Drawing.Size(21, 17);
             this.lbl_bookid.TabIndex = 21;
             this.lbl_bookid.Text = "ID";
+            this.lbl_bookid.Click += new System.EventHandler(this.lbl_bookid_Click);
             // 
             // label13
             // 
@@ -292,11 +288,8 @@ namespace SportsClub
             this.txt_notick.Size = new System.Drawing.Size(173, 22);
             this.txt_notick.TabIndex = 6;
             this.txt_notick.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-<<<<<<< HEAD
             this.txt_notick.Enter += new System.EventHandler(this.txt_notick_Enter);
             this.txt_notick.Leave += new System.EventHandler(this.txt_notick_Leave);
-=======
->>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
             // 
             // label3
             // 
@@ -360,8 +353,9 @@ namespace SportsClub
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.Save_btn);
             this.tabPage2.Controls.Add(this.label20);
-            this.tabPage2.Controls.Add(this.TeamID_lbl);
+            this.tabPage2.Controls.Add(this.CapName_lbl);
             this.tabPage2.Controls.Add(this.Sport_cmb);
             this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.label17);
@@ -387,20 +381,20 @@ namespace SportsClub
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(572, 391);
+            this.label20.Location = new System.Drawing.Point(560, 469);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(29, 17);
             this.label20.TabIndex = 17;
             this.label20.Text = "L.E";
             // 
-            // TeamID_lbl
+            // CapName_lbl
             // 
-            this.TeamID_lbl.AutoSize = true;
-            this.TeamID_lbl.Location = new System.Drawing.Point(421, 391);
-            this.TeamID_lbl.Name = "TeamID_lbl";
-            this.TeamID_lbl.Size = new System.Drawing.Size(40, 17);
-            this.TeamID_lbl.TabIndex = 16;
-            this.TeamID_lbl.Text = "        ";
+            this.CapName_lbl.AutoSize = true;
+            this.CapName_lbl.Location = new System.Drawing.Point(421, 391);
+            this.CapName_lbl.Name = "CapName_lbl";
+            this.CapName_lbl.Size = new System.Drawing.Size(40, 17);
+            this.CapName_lbl.TabIndex = 16;
+            this.CapName_lbl.Text = "        ";
             // 
             // Sport_cmb
             // 
@@ -522,31 +516,28 @@ namespace SportsClub
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(277, 391);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 17);
+            this.label9.Size = new System.Drawing.Size(97, 17);
             this.label9.TabIndex = 2;
-            this.label9.Text = "Team ID";
+            this.label9.Text = "Captain Name";
             // 
             // Join_btn
             // 
-            this.Join_btn.Location = new System.Drawing.Point(682, 496);
+            this.Join_btn.Location = new System.Drawing.Point(759, 521);
             this.Join_btn.Name = "Join_btn";
-            this.Join_btn.Size = new System.Drawing.Size(75, 23);
+            this.Join_btn.Size = new System.Drawing.Size(75, 29);
             this.Join_btn.TabIndex = 1;
             this.Join_btn.Text = "Join";
             this.Join_btn.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
             // 
-            // btn_save
+            // Save_btn
             // 
-            this.btn_save.Location = new System.Drawing.Point(571, 390);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(75, 35);
-            this.btn_save.TabIndex = 25;
-            this.btn_save.Text = "Save";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.button1_Click);
-=======
->>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
+            this.Save_btn.Location = new System.Drawing.Point(669, 391);
+            this.Save_btn.Name = "Save_btn";
+            this.Save_btn.Size = new System.Drawing.Size(75, 23);
+            this.Save_btn.TabIndex = 18;
+            this.Save_btn.Text = "Save";
+            this.Save_btn.UseVisualStyleBackColor = true;
+            this.Save_btn.Click += new System.EventHandler(this.Save_btn_Click);
             // 
             // MembersForm
             // 
@@ -596,7 +587,7 @@ namespace SportsClub
         private System.Windows.Forms.Button btn_load;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label TeamID_lbl;
+        private System.Windows.Forms.Label CapName_lbl;
         private System.Windows.Forms.ComboBox Sport_cmb;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
@@ -613,6 +604,7 @@ namespace SportsClub
         private System.Windows.Forms.Button Join_btn;
 <<<<<<< HEAD
         private System.Windows.Forms.Button btn_save;
+        private System.Windows.Forms.Button Save_btn;
 =======
 >>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
     }
