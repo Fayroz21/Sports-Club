@@ -171,6 +171,14 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Form2";
             this.Text = "Form2";
+<<<<<<< HEAD
+
+
+            this.Load += new System.EventHandler(this.Form2_Load);
+
+
+=======
+>>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

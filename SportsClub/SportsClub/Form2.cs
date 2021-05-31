@@ -57,10 +57,16 @@ namespace SportsClub
                 MessageBox.Show("Error");
             }
         }
+<<<<<<< HEAD
 
-        private void label1_Click(object sender, EventArgs e)
+
+
+        private void Form2_Load(object sender, EventArgs e)
         {
 
         }
+
+=======
+>>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
     }
 }

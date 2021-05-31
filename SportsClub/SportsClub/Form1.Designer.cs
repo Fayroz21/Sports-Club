@@ -71,6 +71,10 @@ namespace SportsClub
             this.Cost_lbl = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Join_btn = new System.Windows.Forms.Button();
+<<<<<<< HEAD
+            this.btn_save = new System.Windows.Forms.Button();
+=======
+>>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
             this.tabControl1.SuspendLayout();
             this.tab_book.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -88,6 +92,7 @@ namespace SportsClub
             // 
             // tab_book
             // 
+            this.tab_book.Controls.Add(this.btn_save);
             this.tab_book.Controls.Add(this.label8);
             this.tab_book.Controls.Add(this.btn_load);
             this.tab_book.Controls.Add(this.btn_book);
@@ -130,9 +135,15 @@ namespace SportsClub
             // 
             // btn_load
             // 
+<<<<<<< HEAD
+            this.btn_load.Location = new System.Drawing.Point(590, 79);
+            this.btn_load.Name = "btn_load";
+            this.btn_load.Size = new System.Drawing.Size(205, 37);
+=======
             this.btn_load.Location = new System.Drawing.Point(592, 89);
             this.btn_load.Name = "btn_load";
             this.btn_load.Size = new System.Drawing.Size(205, 24);
+>>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
             this.btn_load.TabIndex = 23;
             this.btn_load.Text = "Load Events";
             this.btn_load.UseVisualStyleBackColor = true;
@@ -140,12 +151,20 @@ namespace SportsClub
             // 
             // btn_book
             // 
+<<<<<<< HEAD
+            this.btn_book.Location = new System.Drawing.Point(799, 538);
+=======
             this.btn_book.Location = new System.Drawing.Point(802, 451);
+>>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
             this.btn_book.Name = "btn_book";
             this.btn_book.Size = new System.Drawing.Size(131, 42);
             this.btn_book.TabIndex = 22;
             this.btn_book.Text = "Book";
             this.btn_book.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
+            this.btn_book.Visible = false;
+=======
+>>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
             this.btn_book.Click += new System.EventHandler(this.btn_book_Click);
             // 
             // lbl_bookid
@@ -273,6 +292,11 @@ namespace SportsClub
             this.txt_notick.Size = new System.Drawing.Size(173, 22);
             this.txt_notick.TabIndex = 6;
             this.txt_notick.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+<<<<<<< HEAD
+            this.txt_notick.Enter += new System.EventHandler(this.txt_notick_Enter);
+            this.txt_notick.Leave += new System.EventHandler(this.txt_notick_Leave);
+=======
+>>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
             // 
             // label3
             // 
@@ -510,6 +534,19 @@ namespace SportsClub
             this.Join_btn.TabIndex = 1;
             this.Join_btn.Text = "Join";
             this.Join_btn.UseVisualStyleBackColor = true;
+<<<<<<< HEAD
+            // 
+            // btn_save
+            // 
+            this.btn_save.Location = new System.Drawing.Point(571, 390);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(75, 35);
+            this.btn_save.TabIndex = 25;
+            this.btn_save.Text = "Save";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.button1_Click);
+=======
+>>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
             // 
             // MembersForm
             // 
@@ -518,7 +555,7 @@ namespace SportsClub
             this.ClientSize = new System.Drawing.Size(1410, 749);
             this.Controls.Add(this.tabControl1);
             this.Name = "MembersForm";
-            this.Text = "Form2";
+            this.Text = "UserForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MembersForm_FormClosing);
             this.Load += new System.EventHandler(this.MembersForm_Load);
             this.tabControl1.ResumeLayout(false);
@@ -574,6 +611,10 @@ namespace SportsClub
         private System.Windows.Forms.Label Cost_lbl;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button Join_btn;
+<<<<<<< HEAD
+        private System.Windows.Forms.Button btn_save;
+=======
+>>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
     }
 }
 
