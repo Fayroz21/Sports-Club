@@ -21,7 +21,16 @@ C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.cs
 C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.csproj.CopyComplete
 C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.exe
 C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.pdb
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.Form2.resources
+>>>>>>> d76bf728040d62155f5592c7e2653caa3c80b41e
+D:\SWE semester 4\SWE\projects\Project\SportsClub\SportsClub\obj\Debug\SportsClub.Form2.resources
+>>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
+=======
+C:\Users\rawan\Desktop\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.Form2.resources
+>>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
 E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\bin\Debug\SportsClub.exe.config
 E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\bin\Debug\SportsClub.exe
 E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\bin\Debug\SportsClub.pdb

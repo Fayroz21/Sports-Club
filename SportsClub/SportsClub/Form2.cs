@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Oracle.DataAccess.Client;
 using Oracle.DataAccess.Types;
-
 namespace SportsClub
 {
     public partial class Form2 : Form
@@ -24,7 +23,10 @@ namespace SportsClub
         OracleCommandBuilder builder;
         DataSet ds;
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {}
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -55,41 +57,16 @@ namespace SportsClub
                 MessageBox.Show("Error");
             }
         }
+<<<<<<< HEAD
 
-        private void searchBtn_Click(object sender, EventArgs e)
+
+
+        private void Form2_Load(object sender, EventArgs e)
         {
-            
-            string cmdmemberData = "select memberid, fisrtname, lastname, phone_number, gender, city, streetname, username from members where memberid =:id";
-            adapter = new OracleDataAdapter(cmdmemberData, ordb);
-            adapter.SelectCommand.Parameters.Add("id", memberID_txt.Text);
-            ds = new DataSet();
-            adapter.Fill(ds);
-            memberGridView.DataSource = ds.Tables[0];
+
         }
 
-        private void updateChangesBtn_Click(object sender, EventArgs e)
-        {
-            builder = new OracleCommandBuilder(adapter);
-            adapter.Update(ds.Tables[0]);
-            MessageBox.Show("The Changes are updated successfully");
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-            string membersInfo = "select * from members";
-            adapter = new OracleDataAdapter(membersInfo, ordb);
-            ds = new DataSet();
-            adapter.Fill(ds);
-            memberGridView.DataSource = ds.Tables[0];
-        }
-
-        private void AdminForm_Load(object sender, EventArgs e)
-        {
-            dateLabel.Text = DateTime.Now.ToString();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e) { }
-
-        private void tabPage1_Click(object sender, EventArgs e) {}
+=======
+>>>>>>> d95c183de2320cdde1b16677f06300f6ba182f85
     }
 }
