@@ -37,7 +37,8 @@ namespace SportsClub
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            AdminForm Ad = new AdminForm();
+            Ad.Show();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -71,7 +72,7 @@ namespace SportsClub
             cmd.Connection = conn;
             cmd.CommandText = "GetSport";
             cmd.CommandType = CommandType.StoredProcedure;
-
+            cmd.Parameters.Add("name", OracleDbType.RefCursor, ParameterDirection.Output);
 
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -229,49 +230,13 @@ namespace SportsClub
                 newID = 1;
 
             }
-
-
             lbl_bookid.Text = newID.ToString();
-
             btn_book.Visible = true;
-
-               lbl_bookid.Text = newID.ToString();
-
-         
-            //Insert
-            OracleCommand insertBooking = new OracleCommand();
-            insertBooking.Connection = conn;
-            insertBooking.CommandText = "insert into bookings values(:bookID,:eventID,:memberID,:noOfPersons,:totalCost)";
-            insertBooking.CommandType = CommandType.Text;
-            insertBooking.Parameters.Add("bookID", newID);
-            insertBooking.Parameters.Add("EventID", eventID);
-            insertBooking.Parameters.Add("memberID", txt_memid.Text);
-            insertBooking.Parameters.Add("noOfPersons", txt_notick.Text);
-            insertBooking.Parameters.Add("totalCost", lbl_totalcost.Text);
-            int r = insertBooking.ExecuteNonQuery();
-            if(r != -1)
-            {
-                MessageBox.Show("Has Been Booked Successfully \nThe total Cost: " + totalCost);
-            }
-
-            else
-            {
-                MessageBox.Show("Error");
-            }
-
-           
         }
 
-       // private void Sport_cmb_SelectedIndexChanged(object sender, EventArgs e)
-       // {
-           
-        //}
+       // private void Sport_cmb_SelectedIndexChanged(object sender, EventArgs e){ }
 
-        //private void MemberID_txt_TextChanged_1(object sender, EventArgs e)
-        //{
-
-
-        //}
+        //private void MemberID_txt_TextChanged_1(object sender, EventArgs e){}
 
         private void Save_btn_Click(object sender, EventArgs e)
         {
@@ -281,34 +246,34 @@ namespace SportsClub
 
             OracleCommand getCapName = new OracleCommand();
             getCapName.Connection = conn;
-            getCapName.CommandText = "GetC";
-            getCapName.CommandType = CommandType.StoredProcedure;
-            getCapName.Parameters.Add("name", Sport_cmb.SelectedItem);
-            if (Female_rb.Checked) 
-            {
-                getCapName.Parameters.Add("g",Female_rb.Text );
-            }
-           else if (Male_rb.Checked)
-            {
-                getCapName.Parameters.Add("g", Female_rb.Text);
-            }
+            getCapName.CommandText = "select captinname, costpermon from sports  where sportname = :name and category =:age and gender = :gender";
+            getCapName.CommandType = CommandType.Text;
+            getCapName.Parameters.Add("name", Sport_cmb.SelectedItem.ToString());
+           
             if (Kid_rb.Checked)
-            {
-                getCapName.Parameters.Add("ca_age", Kid_rb.Text);
-            }
+                getCapName.Parameters.Add("age", "kids");
             else if (Teenager_rb.Checked)
-            {
-                getCapName.Parameters.Add("ca_age", Teenager_rb.Text);
-            }
-            getCapName.Parameters.Add("CapName", OracleDbType.Varchar2, ParameterDirection.Output);
-            getCapName.Parameters.Add("Cost", OracleDbType.Int32, ParameterDirection.Output);
-            getCapName.ExecuteNonQuery();
-          
-            CapName_lbl.Text = name.ToString();
-            Cost_lbl.Text = cost.ToString();
-            Join_btn.Visible = true;
+                getCapName.Parameters.Add("age", "teenagers");
 
-            CapName_lbl.Text = name.ToString();
+            if (Female_rb.Checked)
+                getCapName.Parameters.Add("gender", "f" );
+            else if (Male_rb.Checked)
+                getCapName.Parameters.Add("gender", "m");
+
+
+            OracleDataReader dr = getCapName.ExecuteReader();
+
+            if (dr.Read())
+            {
+                CapName_lbl.Text = dr[0].ToString();
+                Cost_lbl.Text = dr[1].ToString();
+                Join_btn.Visible = true;
+
+            }
+            else
+            {
+                MessageBox.Show("No data found");
+            }
         }
 
         private void lbl_bookid_Click(object sender, EventArgs e)
@@ -317,6 +282,16 @@ namespace SportsClub
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tab_book_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
         {
 
         }
