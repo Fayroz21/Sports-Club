@@ -50,6 +50,7 @@
             this.memberID_txt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.viewAll = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -141,6 +142,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.viewAll);
             this.tabPage2.Controls.Add(this.memberGridView);
             this.tabPage2.Controls.Add(this.updateChangesBtn);
             this.tabPage2.Controls.Add(this.searchBtn);
@@ -256,7 +258,7 @@
             // searchBtn
             // 
             this.searchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(205)))), ((int)(((byte)(246)))));
-            this.searchBtn.Location = new System.Drawing.Point(620, 110);
+            this.searchBtn.Location = new System.Drawing.Point(807, 105);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(148, 50);
             this.searchBtn.TabIndex = 7;
@@ -289,6 +291,17 @@
             this.label19.Size = new System.Drawing.Size(291, 23);
             this.label19.TabIndex = 11;
             this.label19.Text = "© Team Software Engineering. 2021. ";
+            // 
+            // viewAll
+            // 
+            this.viewAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(205)))), ((int)(((byte)(246)))));
+            this.viewAll.Location = new System.Drawing.Point(620, 105);
+            this.viewAll.Name = "viewAll";
+            this.viewAll.Size = new System.Drawing.Size(148, 50);
+            this.viewAll.TabIndex = 10;
+            this.viewAll.Text = "View All";
+            this.viewAll.UseVisualStyleBackColor = false;
+            this.viewAll.Click += new System.EventHandler(this.viewAll_Click);
             // 
             // AdminForm
             // 
@@ -339,5 +352,6 @@
         private System.Windows.Forms.TextBox memberID_txt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button viewAll;
     }
 }

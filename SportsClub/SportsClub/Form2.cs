@@ -82,7 +82,9 @@ namespace SportsClub
             MessageBox.Show("The Changes are updated successfully");
         }
 
-        private void tabPage2_Click(object sender, EventArgs e)
+        private void tabPage2_Click(object sender, EventArgs e){ }
+
+        private void viewAll_Click(object sender, EventArgs e)
         {
             string membersInfo = "select * from members";
             adapter = new OracleDataAdapter(membersInfo, ordb);
