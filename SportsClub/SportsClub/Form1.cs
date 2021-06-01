@@ -13,7 +13,7 @@ using Oracle.DataAccess.Types;
 
 namespace SportsClub
 {
-    public partial class MembersForm : Form
+    public partial class Form1 : Form
     {
         
 
@@ -21,49 +21,46 @@ namespace SportsClub
         OracleConnection conn;
         string eventType;
         int eventID;
-        public MembersForm()
+
+        int totalCost;
+        int newID;
+        string name;
+        int cost;
+
+
+        public Form1()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+        private void label2_Click(object sender, EventArgs e) { }
 
-        }
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+        private void label4_Click(object sender, EventArgs e) { }
 
-        }
+        private void label3_Click(object sender, EventArgs e) { }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_cost_Click(object sender, EventArgs e)
-        {
-            //fvmcfjnf
-        }
+        private void lbl_cost_Click(object sender, EventArgs e){ }
 
         private void MembersForm_Load(object sender, EventArgs e)
         {
             conn = new OracleConnection(ordb);
             conn.Open();
+
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "Select SportName from Sports ";
-            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "GETSPORT";
+            cmd.CommandType = CommandType.StoredProcedure;
+           
+            cmd.Parameters.Add("name", OracleDbType.RefCursor, ParameterDirection.Output);
+            
 
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
                 Sport_cmb.Items.Add(dr[0]);
+
             }
             dr.Close();
 
@@ -130,16 +127,9 @@ namespace SportsClub
 
             }
                 
-            
-
-
-
         }
 
-        private void lbl_ed_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void lbl_ed_Click(object sender, EventArgs e){ }
 
         private void btn_book_Click(object sender, EventArgs e)
         {
@@ -190,17 +180,55 @@ namespace SportsClub
                 MessageBox.Show("Error");
             }
 
-           
         }
 
-        private void Sport_cmb_SelectedIndexChanged(object sender, EventArgs e)
+        private void Sport_cmb_SelectedIndexChanged(object sender, EventArgs e) { }
+
+        private void MemberID_txt_TextChanged_1(object sender, EventArgs e) { }
+
+        private void label1_Click(object sender, EventArgs e) { }
+
+        private void tab_book_Click(object sender, EventArgs e) { }
+
+        private void tabPage2_Click(object sender, EventArgs e) { }
+
+        private void Save_Btn_Click(object sender, EventArgs e)
         {
+            OracleCommand getCapName = new OracleCommand();
+            getCapName.Connection = conn;
+            getCapName.CommandText = "select captinname, costpermon from sports  where sportname = :name and category =:age and gender = :gender";
+            getCapName.CommandType = CommandType.Text;
+            getCapName.Parameters.Add("name", Sport_cmb.SelectedItem.ToString());
+
+            if (kidRadBtn.Checked)
+                getCapName.Parameters.Add("age", "kids");
+            else if (teenRadBtn.Checked)
+                getCapName.Parameters.Add("age", "teenagers");
+
+            //getCapName.Parameters.Add("age", Age_cmb.SelectedItem.ToString());
+            if (Male_rb.Checked)
+                getCapName.Parameters.Add("gender", "m");
+            else if (Female_rb.Checked)
+                getCapName.Parameters.Add("gender", "f");
            
+            
+            //getCapName.Parameters.Add("gender", Gender_cmb.SelectedItem.ToString());
+            OracleDataReader dr = getCapName.ExecuteReader();
+
+            if (dr.Read())
+            {
+                CapName_lbl.Text = dr[0].ToString();
+                Cost_lbl.Text = dr[1].ToString();
+                Join_btn.Visible = true;
+
+            }
+            else
+            {
+                MessageBox.Show("No data found");
+            }
         }
 
-        private void MemberID_txt_TextChanged_1(object sender, EventArgs e)
-        {
+        private void label18_Click(object sender, EventArgs e){ }
 
-        }
     }
 }

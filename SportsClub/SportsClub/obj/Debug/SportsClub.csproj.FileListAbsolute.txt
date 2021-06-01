@@ -33,3 +33,14 @@ E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\S
 E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.csproj.CoreCompileInputs.cache
 E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.exe
 E:\Books and Records\Year Two\Second Semester\Software Engineering\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.pdb
+C:\Users\Salma\OneDrive\Documents\GitHub\Sports-Club\SportsClub\SportsClub\bin\Debug\SportsClub.exe.config
+C:\Users\Salma\OneDrive\Documents\GitHub\Sports-Club\SportsClub\SportsClub\bin\Debug\SportsClub.exe
+C:\Users\Salma\OneDrive\Documents\GitHub\Sports-Club\SportsClub\SportsClub\bin\Debug\SportsClub.pdb
+C:\Users\Salma\OneDrive\Documents\GitHub\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.csprojAssemblyReference.cache
+C:\Users\Salma\OneDrive\Documents\GitHub\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.MembersForm.resources
+C:\Users\Salma\OneDrive\Documents\GitHub\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.Properties.Resources.resources
+C:\Users\Salma\OneDrive\Documents\GitHub\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.csproj.GenerateResource.cache
+C:\Users\Salma\OneDrive\Documents\GitHub\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.csproj.CoreCompileInputs.cache
+C:\Users\Salma\OneDrive\Documents\GitHub\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.exe
+C:\Users\Salma\OneDrive\Documents\GitHub\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.pdb
+C:\Users\Salma\OneDrive\Documents\GitHub\Sports-Club\SportsClub\SportsClub\obj\Debug\SportsClub.AdminForm.resources
